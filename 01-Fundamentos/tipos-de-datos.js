@@ -20,12 +20,22 @@ Los tipos de datos se dividen en primitivos y complejos.
 
   Es el valor que se le asigna a una variable que ha sido declarado pero no inicializada. 
 
-  2. Datos complejos
+  2. Datos complejos o de objeto
 
   *Array  o arreglo
 
   Un conjunto de datos que los almacena en una lista ordenada de elementos. Los datos dentro de los arreglos se escriben entre corchetes [] y separados por comas , 
+
+  * Object
+
+  Este tipo de dato es un conjunto de múltiples pares de algo que se llama 'clave' - 'valor'. Se escriben entre llaves {} y separados por comas. 
+
+  *Functions o funciones
+
+  Son un tipo de dato que puede ser "invocado" .Se declaran con la pala bra resrvada "function" y el código que ejecutan entre llaves {"código"}
 */
+
+/* Numbers */
 
 let miNumero = 11;
 let miNumeroDecimal = 3.7846;
@@ -54,16 +64,47 @@ console.log(miMentira);
 let x; //Declarar una variable sin inicilizarla. 
 console.log(x);
 
-x = prompt("¿Cual es tú número favorito?")
+/*x = prompt("¿Cual es tú número favorito?")*/
 
 console.log(x); //El valor que el usuario introduzca
 
 /* Array */
 
-let miFrutasFavoritas = ["Platano", "Uvas", "Papaya"];
+let misFrutasFavoritas = ["Platano", "Uvas", "Papaya"];
 let misNumeroSuerte = [2, 11, 220, 5000];
 let otroArray = ["Queso", 11 , true];
 
-console.log(misFrutasFavoritas);
-console.log(misNumerosSuerte);
+console.log(misFrutasFavoritas[1]);
+console.log(misNumeroSuerte);
 console.log(otroArray);
+
+/* Objeto */
+
+let persona = {
+  // clave : valor, 
+  nombre : "Tilín",
+  edad : 15,
+  colorCabello : "negro",
+  colorOjos: "rojo",
+  altura : 1.68,
+  peso : undefined,
+  vivo : true, /* en mi mente */
+  novio : false, /* el Bobby */
+}
+
+console.log(persona)
+//Accedemos al valorde una clave dentro de un objeto.
+//Con la notación de punto.
+console.log(persona.nombre);
+console.log(persona.altura);
+console.log(persona.novio);
+
+/* Function */
+
+let mensajito = function () {
+  //Pasamos el código que ejecuta la función
+  console.log("Este es un mensajito lanzado por una función")
+}
+
+//Invocamos a la función
+mensajito();
