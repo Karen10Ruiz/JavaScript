@@ -17,7 +17,7 @@
 
     Sintaxis
 
-    function nombreFncion( parametros1, param2 ) {
+    function nombreFuncion( parametros1, param2 ) {
     //código que se va a ejecutar.
     return resultado;
     }
